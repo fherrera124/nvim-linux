@@ -21,4 +21,23 @@ Tengo varios videos con explicaciones de instalación y configuración.
 - Vim-Multiple-Cursors
 
 
+## Pasos para instalar en Ubuntu WSL (Windows 10)
 
+Para tener version de nvim 5:
+`´vadd-apt-repository ppa:neovim-ppa/stable´
+´apt update && apt install neovim´
+
+Para comando rg:
+```´```apt install ripgrep``´
+
+Para vim-plug:
+´sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'´
+
+Para node +12:
+´curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -´
+
+´apt install -y nodejs´
+
+Necesario para compilar
+´gcc´
+´build-essential´

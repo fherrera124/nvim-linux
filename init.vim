@@ -1,4 +1,4 @@
-"█╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
+"██╗███╗░░██╗██╗████████╗░░░██╗░░░██╗██╗███╗░░░███╗
 "██║████╗░██║██║╚══██╔══╝░░░██║░░░██║██║████╗░████║
 "██║██╔██╗██║██║░░░██║░░░░░░╚██╗░██╔╝██║██╔████╔██║
 "██║██║╚████║██║░░░██║░░░░░░░╚████╔╝░██║██║╚██╔╝██║
@@ -22,6 +22,8 @@ set laststatus=2
 set backspace=2
 set guioptions-=T
 set guioptions-=L
+" live highlight substitutions
+set inccommand=nosplit
 "Get out of insert mode 
 imap jk <Esc>
 imap <C-c> <Esc>l
@@ -37,10 +39,10 @@ vnoremap > >gv
 source $HOME/.config/nvim/plugins/plugins.vim
 source $HOME/.config/nvim/plugins/plug-config.vim
 "--------------------------------Plugins Config--------------------------------------------
-" Para trabajar con ventanas
+" Para trabajar con ventanas (x ej: <Leader>p c, <Leader>p o)
 nmap <Leader>p <C-w>
 " nueva ventana vertical
-nmap <Leader>\| :vsp<CR>
+nmap <Leader>_ :vsp<CR>
 " nueva ventana horizontal
 nmap <Leader>- :sp<CR>
 
@@ -76,9 +78,9 @@ let NERDTreeQuitOnOpen = 1
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " TAB in general mode will move to text buffer
-nnoremap <silent> <TAB> :bnext<CR>
+nmap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
-nnoremap <silent> <S-TAB> :bprevious<CR>
+nmap <silent> <S-TAB> :bprev<CR>
 "close buffer
 nmap <leader>bd :bdelete<CR>
 "--Themes config--
